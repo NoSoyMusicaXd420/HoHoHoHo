@@ -879,20 +879,7 @@ CreateSupportList({"Pet Simulator X","GPO - Grand Piece Online","Blox Fruit","Ki
 	"Murder Mystery 2","steve's one piece","Anime Fighters Simulator","Tradelands","Dungeon Quest","Two Piece"
 })
 _G.HoHoLoaded = true
-if not getgenv().Key and listPre[game.GameId] ~= nil then
-	getgenv().messagebox = function()end
-	loadstring(listPre[tonumber(game.GameId)])()
-elseif  getgenv().Key and list[game.GameId] ~= nil then
-	loadstring(list[tonumber(game.GameId)])()
-else
-	game.Players.LocalPlayer:Kick("game not support, discord.gg/hohohub")
-end
 
-if _G["HoHo Hub Auto Bounty V3"] or _G["Fumo Blox Fruit - HoHo Hub Kaitun V3"] then return end
-
-local path = "loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua'))()"
-if getgenv().Key then
-	path = "getgenv().Key = '"..getgenv().Key.."'\n"..path
-end
 local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+local path = "loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua'))()"
 queueteleport(path)
